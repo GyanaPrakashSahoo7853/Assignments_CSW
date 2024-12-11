@@ -1,0 +1,23 @@
+body {
+    background-color: white;
+}
+  
+.heading5 {
+    color: orange;
+    font-size: 18px;
+}
+  
+.paragraph {
+    color: grey;
+    font-size: 14px;
+}
+  
+#heading3 {
+    text-align: center;
+    font-weight: bold;
+}
+  
+#heading4 {
+    text-align: right;
+    font-weight: italic;
+}

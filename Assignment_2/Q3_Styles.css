@@ -1,0 +1,7 @@
+#my-div {
+    color: black; /* initial text color */
+  }
+  
+  #image:hover + #my-div {
+    color: red; /* change text color on hover */
+  }

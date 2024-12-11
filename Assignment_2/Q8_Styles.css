@@ -1,0 +1,64 @@
+.image-container {
+  width: 100%;
+  height: 200px;
+  background-image: url('https://imgs.search.brave.com/pv0DkAwv8SvEURgJHg4kbdtGFlsQGlXbqx03CrN3YZM/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvOTA0/MDg3NTAyL3Bob3Rv/L3Rva3lvLWphcGFu/LXBhZ2FuaS1odWF5/cmEtYmMtZGlzcGxh/eWVkLWR1cmluZy10/b2t5by1hdXRvLXNh/bG9uLTIwMTgtYXQt/bWFrdWhhcmktbWVz/c2Utb24uanBnP3M9/NjEyeDYxMiZ3PTAm/az0yMCZjPU9iT2ZR/RUIxRXdDVjBCRTBn/U0RUZGpiNS1wZjJu/bHBZTjVINUl6blVJ/em89');
+  background-repeat: repeat-x;
+  border: 5px solid green;
+  outline: 2px dashed purple;
+  outline-offset: 10px;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  border: 1px solid yellow;
+  outline: 1px dotted red;
+}
+
+.nav-bar {
+  position: sticky;
+  top: 0;
+  background-color: #f0f0f0;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.nav-bar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-bar li {
+  margin-right: 20px;
+}
+
+.nav-bar a {
+  text-decoration: none;
+  color: #333;
+}
+
+.nav-bar a:hover {
+  background-color: #ccc;
+  color: #fff;
+}
+
+.styled-text {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+}
+
+.styled-text h1 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #333;
+}
+
+.styled-text p {
+  font-size: 18px;
+  color: #666;
+}

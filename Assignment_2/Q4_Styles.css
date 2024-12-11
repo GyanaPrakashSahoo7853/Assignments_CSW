@@ -1,0 +1,11 @@
+#background-image {
+    width: 400px; /* set the width of the div */
+    height: 200px; /* set the height of the div */
+    background-image: url('https://imgs.search.brave.com/bd-6I5sIGZjT0AHt-anBozVFetHg-bqhIjZOckXoZh4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/bXVjaGJldHRlcmFk/dmVudHVyZXMuY29t/L21hZ2F6aW5lL2Nv/bnRlbnQvaW1hZ2Vz/L3NpemUvdzIwMDAv/MjAxOS8xMC8yOTEy/MjYwMi9pU3RvY2st/OTcxMDUzMzc0Lmpw/Zw'); /* set the initial background image */
+    background-size: cover; /* cover the div with the background image */
+    transition: background-image 0.5s ease-in-out; /* add a transition effect */
+  }
+  
+  #background-image:hover {
+    background-image: url('https://imgs.search.brave.com/C2FJkzcAsLxuY0gtJyp-gYRlpaXml2QhyUGMNS4W3io/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/ZnJlZS1waG90by9i/ZWF1dGlmdWwtbmF0/dXJhbC12aWV3LWxh/bmRzY2FwZV8yMy0y/MTUwNzg3OTk2Lmpw/Zz9zaXplPTYyNiZl/eHQ9anBn'); /* change the background image on hover */
+  }

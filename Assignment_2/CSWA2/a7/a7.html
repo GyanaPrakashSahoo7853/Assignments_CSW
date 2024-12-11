@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fixed Vertical Menu Bar</title>
+    <style>
+        /* Styling the vertical menu */
+        .menu-bar {
+            position: fixed; /* Sticks the menu to one side */
+            top: 0; /* Start from the top of the page */
+            left: 0; /* Sticks the menu to the left side */
+            width: 200px; /* Menu bar width */
+            height: 100%; /* Full height of the page */
+            background-color: black; /* Dark background color */
+            padding-top: 20px; /* Space at the top */
+            box-shadow: 2px 0 5px black; /* Add shadow for better visibility */
+        }
+
+        /* Menu links */
+        .menu-bar a {
+            display: block; /* Each link on a new line */
+            color: white; /* Link color */
+            padding: 15px; /* Padding for clickable area */
+            text-decoration: none; /* Remove underline */
+            font-family: sans-serif; /* Use sans-serif font */
+            font-size: 18px; /* Increase font size */
+            text-align: center; /* Center the text */
+        }
+
+        /* Change link color on hover */
+        .menu-bar a:hover {
+            background-color: gray; /* Darker background on hover */
+        }
+
+        /* Simulate longer content on the page */
+        .content {
+            margin-left: 219px; /* Leave space for the fixed menu */
+            padding: 2px;
+            height: 2000px; /* Add a large height to simulate a long page */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Vertical menu bar -->
+    <div class="menu-bar">
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+    <!-- Simulated content -->
+    <div class="content">
+        <h1>Welcome to the Page</h1>
+        <p>Hello people!</p>
+    </div>
+
+</body>
+</html>

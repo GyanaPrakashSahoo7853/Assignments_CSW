@@ -1,0 +1,18 @@
+.product-container {
+    width: 400px; /* content width */
+    padding: 20px; /* padding on all sides */
+    border: 10px solid white; /* border */
+    margin: 15px; /* margin around the container */
+    display: inline-block; /* to arrange products in a row */
+    vertical-align: top; /* to align images and descriptions properly */
+  }
+  
+  .product-container img {
+    width: 100%; /* image width to fit the container */
+    height: auto; /* maintain image aspect ratio */
+    margin-bottom: 10px; /* add some space between image and description */
+  }
+  
+  .product-container p {
+    text-align: center; /* center the description text */
+  }

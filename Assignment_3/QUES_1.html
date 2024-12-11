@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUES_1</title>
+</head>
+<style>
+    .color-button {
+        margin: 10px;
+        padding: 10px;
+        cursor: pointer;
+    }
+    .toggle-button {
+        margin: 10px;
+        padding: 10px;
+        cursor: pointer;
+    }
+    .content {
+        margin: 20px;
+        padding: 20px;
+        border: 1px solid #ccc;
+    }
+</style>
+<script src="jquery-3.7.1.min.js"></script>
+<script>
+ $(document).ready(function() {
+            $('#red-btn').click(function() {
+                $('body').css('background-color', 'red');
+            });
+
+            $('#blue-btn').click(function() {
+                $('body').css('background-color', 'blue');
+            });
+
+            $('#green-btn').click(function() {
+                $('body').css('background-color', 'green');
+            });
+
+            $('#toggle-btn').click(function() {
+                $('.content').toggle();
+            });
+        });
+</script>
+<body>
+</head>
+<body>
+    <button class="color-button" id="red-btn">Red</button>
+    <button class="color-button" id="blue-btn">Blue</button>
+    <button class="color-button" id="green-btn">Green</button>
+    <button class="toggle-button" id="toggle-btn">Toggle Div Visibility</button>
+    <div class="content">This is a div element.</div>
+    <div class="content">This is another div element.</div>
+    <div class="content">This is yet another div element.</div>
+</body>
+</html>

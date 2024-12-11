@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUES_4</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <style>
+        .button {
+            margin: 10px;
+            padding: 10px;
+            cursor: pointer;
+        }
+        #myDiv {
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<script>
+    $(document).ready(function() {
+        $('#fetch-text-btn').click(function() {
+            alert($('#myParagraph').text());
+        });
+
+        $('#fetch-html-btn').click(function() {
+            alert($('#myDiv').html());
+        });
+    });
+</script>
+<body>
+    <button class="button" id="fetch-text-btn">Fetch Text</button>
+    <button class="button" id="fetch-html-btn">Fetch HTML</button>
+
+    <p id="myParagraph">This is some text content in a paragraph.</p>
+    <div id="myDiv">
+        <p>This is some HTML content in a div.</p>
+    </div>
+</body>
+</html>

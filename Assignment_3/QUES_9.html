@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUES_9</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <style>
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+        }
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            z-index: 1001;
+        }
+        .close-btn {
+            margin-top: 10px;
+            padding: 10px;
+            cursor: pointer;
+            background: #0fc215;
+            color: white;
+            border: none;
+        }
+    </style>
+</head>
+<script>
+    $(document).ready(function() {
+        $('#show-popup').click(function() {
+            $('.overlay, .popup').fadeIn();
+        });
+
+        $('.close-btn, .overlay').click(function() {
+            $('.overlay, .popup').fadeOut();
+        });
+    });
+</script>
+<body>
+
+    <button id="show-popup">Show Popup</button>
+
+    <div class="overlay"></div>
+    <div class="popup">
+        <p>This is a custom popup box!</p>
+        <button class="close-btn">Close</button>
+    </div>
+
+  
+
+</body>
+</html>

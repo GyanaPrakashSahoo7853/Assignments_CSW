@@ -1,0 +1,11 @@
+ul {
+  list-style-image: url('https://imgs.search.brave.com/DXYkFWp3D-m5M9PkIQz0IVObj9P5IcyqzkUKwkg3Dus/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/dW5pdmVyc2l0eWth/cnQuY29tLy9Db250/ZW50L3VwbG9hZC9h/ZG1pbi9rb2pycDBv/ZS4yMWIucG5n'); /* replace with the actual image URL */
+  padding: 0 300px 0; /* adjust padding to position the image correctly */
+}
+
+li {
+  font-family: sans-serif;
+  background-size: 2px 2px; /* adjust background size to fit the image */
+  background-repeat: no-repeat;
+  padding: 5px 0 5px 30px; /* adjust padding to position the text correctly */
+}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUES_10</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 50px;
+            
+        }
+        form {
+            max-width: 400px;
+            margin: auto;
+            padding: 20px;
+            border: 2px solid black;
+            border-radius: 5px;
+        }
+        input[type="text"], input[type="email"], input[type="password"], button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover{
+            background-color:green;
+        }
+        input[type="text"]:hover, input[type="email"]:hover, input[type="password"]:hover{  
+            border-color:black;
+        }
+        .error {
+            color: red;
+            margin-top: -10px;
+        }
+    </style>
+</head>
+<body>
+
+    <form id="signupForm">
+        <h2>Sign Up</h2>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name">
+        <div class="error" id="nameError"></div>
+        <br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email">
+        <div class="error" id="emailError"></div>
+        <br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password">
+        <div class="error" id="passwordError"></div>
+
+        <button type="submit">Sign Up</button>
+    </form>
+
+    <script>
+        document.getElementById('signupForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            clearErrors();
+
+            let hasError = false;
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            if (!name) {
+                showError('nameError', 'Name is required.');
+                hasError = true;
+            }
+
+            if (!email) {
+                showError('emailError', 'Email is required.');
+                hasError = true;
+            } else if (!validateEmail(email)) {
+                showError('emailError', 'Email is not valid.');
+                hasError = true;
+            }
+
+            if (!password) {
+                showError('passwordError', 'Password is required.');
+                hasError = true;
+            }
+
+            if (!hasError) {
+                alert('Form submitted successfully.');
+                // Here you can add the code to actually submit the form data
+            }
+        });
+
+        function showError(elementId, message) {
+            document.getElementById(elementId).innerText = message;
+        }
+
+        function clearErrors() {
+            document.getElementById('nameError').innerText = '';
+            document.getElementById('emailError').innerText = '';
+            document.getElementById('passwordError').innerText = '';
+        }
+
+        function validateEmail(email) {
+            const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return re.test(email);
+        }
+    </script>
+
+</body>
+</html>

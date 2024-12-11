@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUES_5</title>
+    <script src="jquery-3.7.1.min.js"></script>
+</head>
+<script>
+    $(document).ready(function() {
+        // Add 'CSS' at the end of the list
+        $('#topic-list').append('<li>CSS</li>');
+
+        // Add 'Introduction to Full Stack Development' at the beginning of the list
+        $('#topic-list').prepend('<li>Introduction to Full Stack Development</li>');
+
+        // Insert a paragraph 'Topics updated' immediately after the list
+        $('#topic-list').after('<p>Topics updated</p>');
+
+        // Add a heading 'List of Topics Covered' immediately before the list
+        $('#topic-list').before('<h2>List of Topics Covered</h2>');
+    });
+</script>
+<body>
+
+    <ul id="topic-list">
+        <li>Getting Started with Full Stack</li>
+        <li>HTML</li>
+        <li>CSS</li>
+    </ul>
+
+    
+
+</body>
+</html>

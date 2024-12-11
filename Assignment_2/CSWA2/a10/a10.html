@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SOA Registration Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: lightblue;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .registration-container {
+            background-color: rgb(202, 136, 60);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px;
+            width: 400px;
+            text-align: center;
+        }
+        .logo {
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="email"],
+        select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid wheat;
+            border-radius: 9px;
+            font-size: 16px;
+        }
+
+        input[type="submit"] {
+            background-color: lightcyan;
+            color: rgb(15, 234, 7);
+            padding: 10px;
+            width: 100%;
+            border: none;
+            border-radius: 5px;
+            cursor: progress;
+            font-size: 18px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: black;
+        }
+
+        select {
+            appearance: none;
+            background-color: whitesmoke;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+   
+    <div class="registration-container">
+       
+        <img src="soa.jfif" alt="SOA Logo" class="logo" width="150" >
+
+        <form action="#" method="POST">
+          
+            <input type="text" name="first_name" placeholder="First Name" required>
+            <input type="text" name="last_name" placeholder="Last Name" required>
+
+            <input type="email" name="email" placeholder="Email" required>
+
+            <input type="password" name="password" placeholder="Password" required>
+
+         
+            <div class="radio-container">
+                <label>
+                    <input type="radio" name="gender" value="male" required> Male
+                </label>
+                <label>
+                    <input type="radio" name="gender" value="female" required> Female
+                </label>
+            </div>
+
+            <select name="country" required>
+                <option value="" disabled selected>Select Your Country</option>
+                <option value="usa">USA</option>
+                <option value="canada">Canada</option>
+                <option value="uk">UK</option>
+                <option value="australia">Australia</option>
+                <option value="India">India</option>
+            </select>
+            <input type="submit" value="Register">
+        </form>
+    </div>
+
+</body>
+</html>

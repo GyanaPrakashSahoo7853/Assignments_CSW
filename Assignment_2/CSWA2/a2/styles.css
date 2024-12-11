@@ -1,0 +1,38 @@
+/* Styling the body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    padding: 20px;
+}
+
+/* Container for all products */
+.product-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Each product box */
+.product {
+    width: 400px; /* Content width */
+    padding: 20px; /* Padding */
+    border: 10px solid silver; /* Border */
+    margin: 15px; /* Margin */
+    background-color: whitesmoke; /* Background color */
+    box-sizing: border-box; /* Ensure padding and border are included in width */
+    text-align: center; /* Center align content */
+}
+
+/* Image styling inside the product */
+.product-image {
+    width: 100%; /* Make image take up full width of container */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 10px; /* Space between image and text */
+}
+
+/* Product description styling */
+.product-description {
+    font-size: 16px;
+    color: black;
+    margin: 0; /* No extra margin around the text */
+    line-height: 1.5;
+}
