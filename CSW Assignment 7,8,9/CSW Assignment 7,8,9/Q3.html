@@ -1,0 +1,69 @@
+<html>
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <title>Q3</title>
+ <link rel="stylesheet" 
+href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ <script 
+src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+ <script 
+src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+ <style>
+ body { font-family: Arial, sans-serif; background: white; }
+ table { width: 100%; margin-top: 20px; }
+ th, td { text-align: center; padding: 10px; }
+ tr:nth-child(odd) { background: white; }
+ tr:nth-child(even) { background: whitesmoke; }
+ tr:hover { background: gainsboro; transition: 0.3s; }
+ .edit-btn, .delete-btn { border: none; padding: 5px 10px; border-radius: 5px; cursor: 
+pointer; color: white; }
+ .edit-btn { background: blue; }
+ .edit-btn:hover { background: dodgerblue; }
+ .delete-btn { background: brown; }
+ .delete-btn:hover { background: red; }
+ .search-bar { width: 100%; margin-bottom: 20px; padding: 10px; border: 1px solid whitesmoke; 
+border-radius: 5px; }
+ </style>
+ <script>
+ $(document).ready(function () {
+ $("#searchBar").on("input", function () {
+ const term = $(this).val().toLowerCase();
+ $("#studentTable tr").each(function () {
+ $(this).toggle($(this).find("td:first").text().toLowerCase().includes(term));
+ });
+ });
+ $(".edit-btn").click(function () {
+ alert("Edit functionality clicked for: " + $(this).closest("tr").find("td:first").text());
+ });
+ $(".delete-btn").click(function () {
+ if (confirm("Are you sure you want to delete this student?")) 
+$(this).closest("tr").remove();
+ });
+ });
+ </script>
+</head>
+<body>
+<div class="container text-center">
+ <h1 class="mt-4">Student Information</h1>
+ <p>Manage the list of students, update information, or remove entries as needed.</p>
+ <input type="text" id="searchBar" class="search-bar" placeholder="Search by student 
+name...">
+ <table class="table table-bordered">
+ <thead class="table-primary">
+ <tr><th>Name</th><th>Age</th><th>Semester</th><th>Registration 
+Number</th><th>Actions</th></tr>
+ </thead>
+ <tbody id="studentTable">
+ <tr><td>A. Abhilash</td><td>20</td><td>3rd</td><td>2023041</td>
+ <td><button class="edit-btn">Edit</button> <button class="delete-btn">Delete</button></td></tr>
+ <tr><td>B. Bikash</td><td>22</td><td>5th</td><td>2023052</td>
+ <td><button class="edit-btn">Edit</button> <button class="delete-btn">Delete</button></td></tr>
+ <tr><td>C. Chandrani</td><td>19</td><td>1st</td><td>2023063</td>
+ <td><button class="edit-btn">Edit</button> <button class="delete-btn">Delete</button></td></tr>
+ </tbody>
+ </table>
+</div>
+</body>
+</html>
