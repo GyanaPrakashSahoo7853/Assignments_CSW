@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ques_5</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+     <script>
+     $(document).ready(function () {
+     $('#alumniBtn').click(function () {
+     $('#alumniHeading, #alumniCards').show();
+     $('html, body').animate({
+     scrollTop: $('#alumniHeading').offset().top }, 1000, 'swing');
+     });
+     });
+     </script>
+     <style>
+     .carousel-item img,
+     .card img {
+     width: 100%;
+     height: 600px;
+     object-fit: cover;
+     }
+     body{
+      background-image: url(dirk-lach-b8HYFZVWE4k-unsplash.jpg);
+      background-size: cover;
+     }
+     </style>
+    </head>
+    <body class="bg-light">
+     <div class="container text-center mt-4">
+     <h1>Welcome to ITER School Management System</h1>
+     <p class="lead">Navigate to various sections of the school management system</p>
+     <div class="btn-group btn-group-lg mb-4">
+     <button class="btn btn-primary" onclick="alert('Redirecting to Admission')">Admission</button>
+     <div class="btn-group">
+     <button type="button" class="btn btn-success dropdown-toggle"data-toggle="dropdown">Achievements</button>
+     <div class="dropdown-menu">
+     <a class="dropdown-item" href="Gallery.html">Gallery</a>
+     <a class="dropdown-item" onclick="alert('More Achievements')">More Achievements</a>
+     </div>
+     </div>
+     <button class="btn btn-warning" id="alumniBtn">Alumni</button>
+     </div>
+     
+     <br><br><br><br>
+    
+     <h2 id="alumniHeading" class="mt-5" style="display: none;">Alumni</h2>
+     <div id="alumniCards" class="row mt-4" style="display: none;">
+     <div class="col-md-4 mb-4">
+     <div class="card">
+     <img src="Professor.jpg" class="card-img-top" alt="Alumni 1">
+     <div class="card-body">
+     <h5 class="card-title">Prof. Edward</h5>
+     <p class="card-text">Prof.Edward(Tim) is a Professor of Geology at Carleton University in Ottawa, Ontario, Canada. He obtained his undergraduate degree in geology (1983) 
+      from Dalhousie University in Halifax,</p>
+     </div>
+     </div>
+     </div>
+     <div class="col-md-4 mb-4">
+     <div class="card">
+     <img src="Professor3.jpg" class="card-img-top" alt="Alumni 2">
+     <div class="card-body">
+     <h5 class="card-title">Prof. B.K Swain</h5>
+     <p class="card-text">Prof. B.K Swain is a Professor of Computer Science at SOA University in Bhubaneswar,Odisha. He obtained his undergraduate degree in 
+        computer science (1989) from Centurion University in Bhubaneswar,</p>
+     </div>
+     </div>
+     </div>
+     <div class="col-md-4 mb-4">
+     <div class="card">
+     <img src="PROFESSOR2.jpg" class="card-img-top" alt="Alumni 3">
+     <div class="card-body">
+     <h5 class="card-title">Dr. Satyajit Panda</h5>
+     <p class="card-text">Dr. Satyajit Panda is a Professor of Mathematics at IIT-Delhi in Delhi. He obtained his 
+        undergraduate degree in botany (2001) from Delhi University in Delhi,</p>
+     </div>
+     </div>
+     </div>
+     </div>
+     </div>
+     <br><br><br>
+    </body>
+    </html>

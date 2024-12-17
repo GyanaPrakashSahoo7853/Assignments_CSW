@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q2</title>
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <style>
+        body{
+            background-image: url(Backgrdim.jpg);
+            background-size: cover;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px;
+        }
+        table, th, td {
+            border: 3px solid black;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+        .button {
+            margin: 15px;
+            padding: 15px;
+            cursor: pointer;
+        }
+        .delete-btn { 
+        color: white; 
+        background: brown; 
+        border: none; 
+        padding: 5px 10px; 
+        border-radius: 5px; 
+        cursor: pointer; 
+    }
+        .delete-btn:hover { 
+        background:crimson;
+        color: black;
+    }
+    .edit-btn { 
+        color: white; 
+        background:rgb(10, 217, 41); 
+        padding: 5px 10px;
+        border: none; 
+        border-radius:5px; 
+        cursor: pointer; 
+    }
+    .edit-btn:hover { 
+        background: rgb(212, 81, 5); 
+        color: black;
+    }
+    #add-row-btn{
+        color: white;
+        background: rgb(0, 4, 128);
+    }
+    #add-row-btn:hover{
+        color: black;
+        background:rgb(47, 120, 255);
+    }
+    .search-bar { 
+        width: 60%; 
+        margin-bottom: 20px; 
+        padding: 10px; 
+        border: 1px solid whitesmoke; 
+        border-radius: 5px; 
+    }
+    tr:nth-child(2n)  {
+   background-color:lightseagreen;
+    }  
+    </style>
+</head>
+<script>
+    $(document).ready(function() {
+        $('#add-row-btn').click(function() {
+            const name = $('#name').val();
+            const age = $('#age').val();
+            const regd = $('#regd').val();
+            const semester = $('#semester').val();
+            if (name && age && regd && semester ) {
+                const newRow = `<tr><td>${name}</td><td>${age}</td><td>${regd}</td><td>${semester}</td><td>
+                    <button class="edit-btn">Edit</button></td>
+                    <td><button class="delete-btn">Delete</button></td> </tr>`;
+            $('#student-table tbody').append(newRow);
+            } else {
+                alert('Please fill in all fields');
+            }
+        });
+        $(document).on('click','.delete-btn',function () {
+                    if (confirm("Are you sure you want to delete this student?")) 
+                        $(this).closest("tr").remove();
+        });
+        $(document).on('click','.edit-btn',function () {
+          alert("Edit functionality clicked for student: " + 
+        $(this).closest("tr").find("th:eq(0)").text());
+    });
+        $('#searchBar').on("input" ,function () {
+        const term = $(this).val().toLowerCase();
+        $("#student-table tbody tr").each(function () {
+        $(this).toggle($(this).find('td:first').text().toLowerCase().includes(term));
+        
+ });
+ }); 
+});
+</script>
+<body>
+    <div class="container text-center">
+        <h1 class="mt-4">Student Information</h1>
+        <input type="text" id="searchBar" class="search-bar" placeholder="Search By Student Name...">
+        <p>Manage the list of students, Update information, or Remove entries as needed.</p>
+        <table id="student-table">
+        <tbody>
+            <!-- Rows will be added here -->
+            <tr>
+                <td>Name</td>
+                <td>Age</td>
+                <td>Semester</td>
+                <td>Registration No</td>
+                <th><button class="edit-btn">Edit</button></th>
+                   <th> <button class="delete-btn">Delete</button></th>
+                </tr>
+                
+        </tbody>
+    </table>
+         <label for="name">Name: </label>
+        <input type="text" id="name" name="name">
+        <label for="age">Age: </label>
+        <input type="text" id="age" name="age">
+        <label for="semester">Semester:</label>
+        <input type="semester" id="semester" name="semester">
+        <label for="regd">Registration No: </label>
+        <input type="text" id="regd" name="regd">
+        <button class="button" id="add-row-btn">Add Row</button>
+        <a href="Q3_Q4_Q5.html"><button class="button" id="add-row-btn">Next</button></a>
+    </div>
+</body>
+</html>
